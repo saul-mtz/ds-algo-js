@@ -4,10 +4,10 @@ Data Structures and Algorighms in Javascript
 - Prettier syntax formatter
 
 # Data Structures
-- [Binary Tree](data-structures/BinaryTree).
-- [Stack](data-structures/Stack).
-- [Queue](data-structures/Queue).
-- [Trie](data-structures/Trie).
+- [Binary Tree](data-structures/BinaryTree)
+- [Stack](data-structures/Stack)
+- [Queue](data-structures/Queue)
+- [Trie](data-structures/Trie)
 
 # Algorithms
 - Tree Traversal
