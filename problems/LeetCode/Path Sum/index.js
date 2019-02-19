@@ -21,12 +21,10 @@ var hasPathSum = function(root, sum) {
     let currentSum = 0;
     let n = node;
     do {
-      //console.log({ n });
       currentSum += n.val;
       n = parent.get(n);
     } while (parent.has(n));
 
-    //console.log({ currentSum });
     return currentSum + n.val;
   };
 

@@ -1,29 +1,38 @@
 import Queue from "../../data-structures/Queue";
 import Stack from "../../data-structures/Stack";
 
-export const preOrderTraversal = node => {
+/**
+ * Pre-order (NLR)
+ * @see https://en.wikipedia.org/wiki/Tree_traversal#Pre-order_(NLR)
+ * @param {TreeNode} node
+ */
+export const preOrder = node => {
   if (node) {
-    return [node.val].concat(
-      preOrderTraversal(node.left),
-      preOrderTraversal(node.right)
-    );
+    return [node.val].concat(preOrder(node.left), preOrder(node.right));
   }
   return [];
 };
 
-export const inOrderTraversal = node => {
+/**
+ * In-order (LNR)
+ * @see https://en.wikipedia.org/wiki/Tree_traversal#In-order_(LNR)
+ * @param {TreeNode} node
+ */
+export const inOrder = node => {
   if (node) {
-    return inOrderTraversal(node.left).concat(node.val, inOrderTraversal(node.right));
+    return inOrder(node.left).concat(node.val, inOrder(node.right));
   }
   return [];
 };
 
-export const postOrderTraversal = node => {
+/**
+ * Post-order (LRN)
+ * @see https://en.wikipedia.org/wiki/Tree_traversal#Post-order_(LRN)
+ * @param {TreeNode} node
+ */
+export const postOrder = node => {
   if (node) {
-    return postOrderTraversal(node.left).concat(
-      postOrderTraversal(node.right),
-      node.val
-    );
+    return postOrder(node.left).concat(postOrder(node.right), node.val);
   }
   return [];
 };

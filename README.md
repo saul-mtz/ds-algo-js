@@ -11,8 +11,11 @@ Data Structures and Algorighms in Javascript
 
 # Algorithms
 - Tree Traversal
-  - [Breadth-first search](algorithms/tree-traversal/index.js).
-  - [Depth-first search](algorithms/tree-traversal/index.js).
+  - [Breadth-first search](algorithms/tree-traversal/index.js)
+  - [Depth-first search](algorithms/tree-traversal/index.js)
+    - [Pre-order (NLR)](https://en.wikipedia.org/wiki/Tree_traversal#Pre-order_(NLR))
+    - [In-order (LNR)](https://en.wikipedia.org/wiki/Tree_traversal#In-order_(LNR))
+    - [Post-order (LRN)](https://en.wikipedia.org/wiki/Tree_traversal#Post-order_(LRN))
 
 # Test
 Using jest
