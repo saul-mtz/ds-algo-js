@@ -7,7 +7,7 @@
  * Trie node, it contains all the methods needed for the whole tree, the trie is just
  * a trie node with some children nodes
  */
-https: function Node() {
+function Node() {
   /**
    * children is only defined in insert(), when there is at least one child
    */

@@ -1,4 +1,4 @@
-import Stack from "./Stack";
+import Stack from "../Stack";
 
 test("new", () => {
   const stack = new Stack();

@@ -1,10 +1,5 @@
-import BinaryTree from "./BinaryTree";
+import BinaryTree from ".";
 
-var maxDepth = function(treeInitialValues) {
-  const binaryTree = new BinaryTree(treeInitialValues);
-  console.log("test", binaryTree.breadthFirstSearch());
-  return binaryTree.breadthFirstSearch().length;
-};
-test("maxDepth", () => {
-  expect(maxDepth([3, 9, 20, null, null, 15, 7])).toEqual(3);
+test("build from Array", () => {
+  expect(new BinaryTree([3, 9, 20, null, null, 15, 7]).val).toEqual(3);
 });
