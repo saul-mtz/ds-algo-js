@@ -1,4 +1,7 @@
-import { breadthFirstSearch } from "../../../algorithms/tree-traversal";
+import {
+  breadthFirstSearch,
+  postOrderTraversal
+} from "../../../algorithms/tree-traversal";
 
 /**
  * @see https://leetcode.com/problems/maximum-depth-of-binary-tree/

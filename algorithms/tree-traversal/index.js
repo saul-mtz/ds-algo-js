@@ -1,4 +1,5 @@
 import Queue from "../../data-structures/Queue";
+import Stack from "../../data-structures/Stack";
 
 export const preOrderTraversal = node => {
   if (node) {
@@ -53,4 +54,28 @@ export const breadthFirstSearch = root => {
   }
 
   return nodesPerLevel;
+};
+
+/**
+ * @see https://en.wikipedia.org/wiki/Depth-first_search
+ */
+export const depthFirstSearch = (root, processFn) => {
+  const stack = new Stack(root);
+  const process =
+    typeof processFn === "function" ? processFn : node => console.log(node.val);
+
+  while (!stack.isEmpty()) {
+    const head = stack.pop();
+    if (!process(head)) {
+      return;
+    }
+
+    if (head.left) {
+      stack.push(head.left);
+    }
+
+    if (head.right) {
+      stack.push(head.right);
+    }
+  }
 };

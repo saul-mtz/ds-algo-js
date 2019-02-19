@@ -1,6 +1,14 @@
 import Queue from "../Queue";
 import Node from "../TreeNode";
 
+/**
+ * Validate if a node is a leaf (no children)
+ * @param {TreeNode} node
+ */
+export const isLeaf = node => {
+  return node.left === null && node.right === null;
+};
+
 const buildFromArray = (values, index) => {
   if (index < 0 || index >= values.length) {
     return null;

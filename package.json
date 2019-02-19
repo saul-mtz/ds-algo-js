@@ -9,7 +9,7 @@
     "rollup-plugin-node-resolve": "^4.0.0"
   },
   "scripts": {
-    "bundle": "rollup -c -i",
+    "bundle": "yarn format && rollup -c -i",
     "format": "prettier --print-width 89 --write '**/*.js'",
     "format-check": "prettier --print-width 89 --check '**/*.js'",
     "test": "jest"

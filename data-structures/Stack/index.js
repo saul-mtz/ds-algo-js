@@ -2,8 +2,7 @@
  * Stack
  * @see https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
  */
-export default function Stack() {
-  this.elements = [];
+export default function Stack(initialValues) {
   this.isEmpty = () => {
     return this.elements.length === 0;
   };
@@ -22,4 +21,15 @@ export default function Stack() {
   this.pop = () => {
     return this.elements.pop();
   };
+
+  if (initialValues) {
+    if (Array.isArray(initialValues) && initialValues.length > 0) {
+      this.elements = [];
+      initialValues.forEach(value => this.push(value));
+    } else {
+      this.elements = [initialValues];
+    }
+  } else {
+    this.elements = [];
+  }
 }
