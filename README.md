@@ -15,5 +15,5 @@ there will be a single file in `./bundle.js` with the whole solution code.
 # Problems
 List of solved problems using this repo:
 ## LeetCode
-- [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)[[src](problems/LeetCode/Maximum%20Depth%20of%20Binary%20Tree/index.js)][[test](problems/LeetCode/Maximum%20Depth%20of%20Binary%20Tree/test.js)].
-- [Symmetric Tree](https://leetcode.com/problems/symmetric-tree)[[src](problems/LeetCode/Symmetric%20Tree/index.js)][[test](problems/LeetCode/Symmetric%20Tree/test.js)].
+- [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree) [[src](problems/LeetCode/Maximum%20Depth%20of%20Binary%20Tree/index.js)][[test](problems/LeetCode/Maximum%20Depth%20of%20Binary%20Tree/test.js)].
+- [Symmetric Tree](https://leetcode.com/problems/symmetric-tree) [[src](problems/LeetCode/Symmetric%20Tree/index.js)][[test](problems/LeetCode/Symmetric%20Tree/test.js)].

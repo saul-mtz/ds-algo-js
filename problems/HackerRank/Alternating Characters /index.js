@@ -1,5 +1,5 @@
 /**
- * Alternating Characters 
+ * Alternating Characters
  * @see https://www.hackerrank.com/challenges/alternating-characters
  * */
 
@@ -10,9 +10,9 @@ function alternatingCharacters(s) {
 
   let current = s[0];
   let deletions = 0;
-  for (let i = 1; i < s.length; i ++) {
+  for (let i = 1; i < s.length; i++) {
     if (s[i] === current) {
-      deletions ++;
+      deletions++;
     } else {
       current = s[i];
     }

@@ -1,6 +1,6 @@
-import Queue from '../../data-structures/Queue';
+import Queue from "../../data-structures/Queue";
 
-export const preOrderTraversal = (node) => {
+export const preOrderTraversal = node => {
   if (node) {
     return [node.val].concat(
       preOrderTraversal(node.left),
@@ -10,7 +10,7 @@ export const preOrderTraversal = (node) => {
   return [];
 };
 
-export const inOrderTraversal = (node) => {
+export const inOrderTraversal = node => {
   if (node) {
     return inOrderTraversal(node.left).concat(
       node.val,
@@ -20,7 +20,7 @@ export const inOrderTraversal = (node) => {
   return [];
 };
 
-export const postOrderTraversal = (node) => {
+export const postOrderTraversal = node => {
   if (node) {
     return postOrderTraversal(node.left).concat(
       postOrderTraversal(node.right),
@@ -30,7 +30,7 @@ export const postOrderTraversal = (node) => {
   return [];
 };
 
-export const breadthFirstSearch = (root) => {
+export const breadthFirstSearch = root => {
   const queue = new Queue(root);
   const nodesPerLevel = [];
 
@@ -53,4 +53,4 @@ export const breadthFirstSearch = (root) => {
   }
 
   return nodesPerLevel;
-}
+};

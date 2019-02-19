@@ -5,12 +5,13 @@
     "@babel/preset-env": "^7.3.1",
     "jest": "^24.1.0",
     "prettier": "1.16.4",
+    "rollup": "^1.2.1",
     "rollup-plugin-node-resolve": "^4.0.0"
   },
   "scripts": {
     "bundle": "rollup -c -i",
-    "format": "prettier --write **/*.js",
-    "format-check": "prettier --check **/*.js",
+    "format": "prettier --write '**/*.js'",
+    "format-check": "prettier --check '**/*.js'",
     "test": "jest"
   }
 }
