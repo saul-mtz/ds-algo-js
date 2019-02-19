@@ -6,5 +6,5 @@ var maxDepth = function(treeInitialValues) {
   return binaryTree.breadthFirstSearch().length;
 };
 test("maxDepth", () => {
-  return expect(maxDepth([3, 9, 20, null, null, 15, 7])).toEqual(3);
+  expect(maxDepth([3, 9, 20, null, null, 15, 7])).toEqual(3);
 });

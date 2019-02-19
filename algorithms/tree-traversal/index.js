@@ -12,10 +12,7 @@ export const preOrderTraversal = node => {
 
 export const inOrderTraversal = node => {
   if (node) {
-    return inOrderTraversal(node.left).concat(
-      node.val,
-      inOrderTraversal(node.right)
-    );
+    return inOrderTraversal(node.left).concat(node.val, inOrderTraversal(node.right));
   }
   return [];
 };
@@ -30,6 +27,9 @@ export const postOrderTraversal = node => {
   return [];
 };
 
+/**
+ * @see https://en.wikipedia.org/wiki/Breadth-first_search
+ */
 export const breadthFirstSearch = root => {
   const queue = new Queue(root);
   const nodesPerLevel = [];

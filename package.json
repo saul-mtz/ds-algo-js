@@ -10,8 +10,8 @@
   },
   "scripts": {
     "bundle": "rollup -c -i",
-    "format": "prettier --write '**/*.js'",
-    "format-check": "prettier --check '**/*.js'",
+    "format": "prettier --print-width 89 --write '**/*.js'",
+    "format-check": "prettier --print-width 89 --check '**/*.js'",
     "test": "jest"
   }
 }

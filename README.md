@@ -1,9 +1,19 @@
 # ds-algo-js
 Data Structures and Algorighms in Javascript
 
-Prettier syntax formatter
+- Prettier syntax formatter
 
-# Bundle a single file solution
+# Data Structures
+- [Binary Tree](data-structures/BinaryTree).
+
+# Algorithms
+- Tree Traversal
+  - [Breadth-first search](algorithms/tree-traversal/index.js).
+
+# Test
+Using jest
+
+# Bundle
 In order to create copy/pasteable code have to write the whole solution in a single file I use the awesome [rollupjs](https://rollupjs.org) bundler.
 
 For instance, For the [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree) problem I wrote [this solution](problems/LeetCode/Maximum%20Depth%20of%20Binary%20Tree) and bundled it with:
