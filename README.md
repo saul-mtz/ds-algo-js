@@ -3,13 +3,13 @@ Data Structures and Algorighms in Javascript
 
 - Prettier syntax formatter
 
-# Data Structures
+# [Data Structures](data-structures)
 - [Binary Tree](data-structures/BinaryTree)
 - [Stack](data-structures/Stack)
 - [Queue](data-structures/Queue)
 - [Trie](data-structures/Trie)
 
-# Algorithms
+# [Algorithms](algorithms)
 - Tree Traversal
   - [Breadth-first search](algorithms/tree-traversal/index.js)
   - [Depth-first search](algorithms/tree-traversal/index.js)
@@ -29,9 +29,8 @@ yarn bundle problems/LeetCode/Maximum\ Depth\ of\ Binary\ Tree/index.js
 ```
 there will be a single file in `./bundle.js` with the whole solution code.
 
-# Problems
-List of solved problems using this repo:
-- [LeetCode](https://leetcode.com/saulmtzv)
-  - [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree) [[`src`](problems/LeetCode/Maximum%20Depth%20of%20Binary%20Tree)]
-  - [Path Sum](https://leetcode.com/problems/path-sum) [[`src`](problems/LeetCode/Path%20Sum)]
-  - [Symmetric Tree](https://leetcode.com/problems/symmetric-tree) [[`src`](problems/LeetCode/Symmetric%20Tree)]
+#[Problems 1](problems)
+{{problems}}
+
+#[Problems 2](problems)
+{{problems/README.md}}
