@@ -29,8 +29,8 @@ yarn bundle problems/LeetCode/Maximum\ Depth\ of\ Binary\ Tree/index.js
 ```
 there will be a single file in `./bundle.js` with the whole solution code.
 
-#[Problems 1](problems)
+# [Problems 1](problems)
 {{problems}}
 
-#[Problems 2](problems)
+# [Problems 2](problems)
 {{problems/README.md}}

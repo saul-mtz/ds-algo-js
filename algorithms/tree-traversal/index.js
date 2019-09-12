@@ -7,7 +7,7 @@ import Stack from "../../data-structures/Stack";
  * @param {TreeNode} node
  */
 export const preOrder = node => {
-  if (node) {
+  if (node && node.val) {
     return [node.val].concat(preOrder(node.left), preOrder(node.right));
   }
   return [];
@@ -19,7 +19,7 @@ export const preOrder = node => {
  * @param {TreeNode} node
  */
 export const inOrder = node => {
-  if (node) {
+  if (node && node.val) {
     return inOrder(node.left).concat(node.val, inOrder(node.right));
   }
   return [];
@@ -31,7 +31,7 @@ export const inOrder = node => {
  * @param {TreeNode} node
  */
 export const postOrder = node => {
-  if (node) {
+  if (node && node.val) {
     return postOrder(node.left).concat(postOrder(node.right), node.val);
   }
   return [];
@@ -55,6 +55,7 @@ export const breadthFirstSearch = root => {
       if (node.left) {
         queue.enqueue(node.left);
       }
+
       if (node.right) {
         queue.enqueue(node.right);
       }

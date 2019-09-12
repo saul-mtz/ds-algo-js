@@ -8,6 +8,17 @@ export default function Stack(initialValues) {
   };
 
   /**
+   * Mimics the Java11 API
+   * @see https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Stack.html#peek()
+   */
+  this.peek = () => {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    return this.elements[this.elements.length - 1];
+  };
+
+  /**
    * Javascript builtin push
    * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
    */
@@ -22,6 +33,10 @@ export default function Stack(initialValues) {
     return this.elements.pop();
   };
 
+  this.size = () => {
+    return this.elements.length;
+  };
+
   if (initialValues) {
     if (Array.isArray(initialValues) && initialValues.length > 0) {
       this.elements = [];
@@ -32,4 +47,6 @@ export default function Stack(initialValues) {
   } else {
     this.elements = [];
   }
+
+  return this;
 }

@@ -22,6 +22,14 @@ test("initial data", () => {
   expect(stack.pop()).toStrictEqual({ foo: "bar" });
 });
 
+test("peek", () => {
+  expect(new Stack().peek()).toBeUndefined();
+  expect(new Stack("a").peek()).toStrictEqual("a");
+  expect(new Stack(8).peek()).toStrictEqual(8);
+  expect(new Stack(["a", "b", "c"]).peek()).toStrictEqual("c");
+  expect(new Stack([2, 4, 6]).peek()).toStrictEqual(6);
+});
+
 test("push", () => {
   const stack = new Stack();
   expect(stack.push(1)).toBe(1);
