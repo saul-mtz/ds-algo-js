@@ -4,7 +4,7 @@ import { timingSafeEqual } from "crypto";
  * @param {number} n Number of nodes
  * @param {nmber} m Number of edges
  */
-function Graph () {
+function Graph() {
   this.adjacentList = new Map();
 
   /**
@@ -20,7 +20,7 @@ function Graph () {
       return this.adjacentList.get(x).get(y);
     }
     return null;
-  }
+  };
 
   /**
    * lists all vertices y such that there is an edge from the vertex x to the vertex y
@@ -30,7 +30,7 @@ function Graph () {
       return undefined;
     }
     return this.adjacentList.get(x);
-  }
+  };
 
   this.addEdge = (x, y, weight) => {
     if (this.adjacentList.has(x)) {
@@ -48,7 +48,7 @@ function Graph () {
     }
 
     //console.log('Adding edge', x, y, weight, this.adjacentList);
-  }
+  };
 }
 
 export default Graph;

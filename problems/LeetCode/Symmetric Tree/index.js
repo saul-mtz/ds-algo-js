@@ -8,7 +8,7 @@ import Queue from "../../../data-structures/Queue";
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function(root) {
+var isSymmetric = function (root) {
   const queue = new Queue(root);
 
   while (!queue.isEmpty()) {

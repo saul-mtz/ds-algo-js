@@ -1,9 +1,6 @@
 import buildTree from ".";
 
-import {
-  inOrder as inOrderTraversal,
-  postOrder as postOrderTraversal
-} from "../../../algorithms/tree-traversal";
+import { inOrder as inOrderTraversal, postOrder as postOrderTraversal } from "../../../algorithms/tree-traversal";
 
 const singleTest = (inOrder, postOrder) => {
   const inOrderCopy = [...inOrder];

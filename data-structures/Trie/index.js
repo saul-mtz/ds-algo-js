@@ -66,7 +66,7 @@ function Node() {
     const suffixes = [];
     Object.keys(this.children)
       .sort()
-      .forEach(key => {
+      .forEach((key) => {
         const childSuffixes = this.children[key].toArray();
         if (!childSuffixes) {
           suffixes.push(key);
@@ -83,8 +83,8 @@ function Node() {
 
 function Trie() {
   this.root = new Node();
-  this.insert = str => this.root.insert(str, 0);
-  this.find = str => this.root.find(str, 0);
+  this.insert = (str) => this.root.insert(str, 0);
+  this.find = (str) => this.root.find(str, 0);
   this.toString = () => {
     return this.root.toArray();
   };

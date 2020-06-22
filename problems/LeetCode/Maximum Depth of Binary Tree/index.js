@@ -1,12 +1,9 @@
-import {
-  breadthFirstSearch,
-  postOrderTraversal
-} from "../../../algorithms/tree-traversal";
+import { breadthFirstSearch, postOrderTraversal } from "../../../algorithms/tree-traversal";
 
 /**
  * @see https://leetcode.com/problems/maximum-depth-of-binary-tree/
  */
-var maxDepth = function(root) {
+var maxDepth = function (root) {
   return breadthFirstSearch(root).length;
 };
 

@@ -5,7 +5,7 @@ import Node from "../TreeNode";
  * Validate if a node is a leaf (no children)
  * @param {TreeNode} node
  */
-export const isLeaf = node => {
+export const isLeaf = (node) => {
   return node.left === null && node.right === null;
 };
 

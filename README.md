@@ -8,6 +8,9 @@ Data Structures and Algorighms in Javascript
 - [Stack](data-structures/Stack)
 - [Queue](data-structures/Queue)
 - [Trie](data-structures/Trie)
+- [Heap](data-structures/Heap)
+  - Min-heap
+  - Max-heap
 
 # [Algorithms](algorithms)
 - Tree Traversal
@@ -29,8 +32,6 @@ yarn bundle problems/LeetCode/Maximum\ Depth\ of\ Binary\ Tree/index.js
 ```
 there will be a single file in `./bundle.js` with the whole solution code.
 
-# [Problems 1](problems)
-{{problems}}
-
-# [Problems 2](problems)
-{{problems/README.md}}
+# [Problems](problems)
+## [LeetCode](problems/LeetCode)
+## [HackerRank](problems/HackerRank)

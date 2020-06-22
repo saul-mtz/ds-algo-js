@@ -21,7 +21,7 @@ export default function Queue(initialValues) {
    * Javascript builtin push
    * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
    */
-  this.enqueue = element => {
+  this.enqueue = (element) => {
     return this.elements.push(element);
   };
 

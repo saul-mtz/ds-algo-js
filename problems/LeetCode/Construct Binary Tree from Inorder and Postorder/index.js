@@ -8,7 +8,7 @@ const isParent = (child, parent, inOrderValues) => {
   const childIndex = inOrderValues.indexOf(child.val);
   const parentIndex = inOrderValues.indexOf(parent.val);
   if (parentIndex - childIndex === 1) {
-    console.error('here', { child, parent, inOrderValues });
+    console.error("here", { child, parent, inOrderValues });
   }
   return Math.abs(parentIndex - childIndex) === 1;
 };
@@ -22,7 +22,7 @@ const isRightChild = (child, parent, inOrderValues) => {
  * @param {number[]} postorder
  * @return {TreeNode}
  */
-var buildTree = function(inorder, postorder) {
+var buildTree = function (inorder, postorder) {
   if (inorder.length === 0) {
     return null;
   }
@@ -42,7 +42,7 @@ var buildTree = function(inorder, postorder) {
   }
 
   let root = stack.pop();
-  console.log('before', { root, stack: stack.elements, inorder, postorder });
+  console.log("before", { root, stack: stack.elements, inorder, postorder });
   if (stack.size() > 1) {
     root.right = stack.pop();
     root.left = stack.pop();
@@ -55,7 +55,7 @@ var buildTree = function(inorder, postorder) {
     }
   }
 
-  console.log('after',{ root, stack: stack.elements });
+  console.log("after", { root, stack: stack.elements });
   return root;
 };
 

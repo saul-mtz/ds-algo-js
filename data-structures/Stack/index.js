@@ -22,7 +22,7 @@ export default function Stack(initialValues) {
    * Javascript builtin push
    * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
    */
-  this.push = element => {
+  this.push = (element) => {
     return this.elements.push(element);
   };
 
@@ -40,7 +40,7 @@ export default function Stack(initialValues) {
   if (initialValues) {
     if (Array.isArray(initialValues) && initialValues.length > 0) {
       this.elements = [];
-      initialValues.forEach(value => this.push(value));
+      initialValues.forEach((value) => this.push(value));
     } else {
       this.elements = [initialValues];
     }

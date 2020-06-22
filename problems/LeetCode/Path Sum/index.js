@@ -8,11 +8,11 @@ import { isLeaf } from "../../../data-structures/BinaryTree";
  * @param {number} sum
  * @return {boolean}
  */
-var hasPathSum = function(root, sum) {
+var hasPathSum = function (root, sum) {
   let result = false;
   const parent = new Map();
 
-  const pathSum = node => {
+  const pathSum = (node) => {
     // tree with just one node
     if (!parent.has(node)) {
       return node.val;
@@ -28,7 +28,7 @@ var hasPathSum = function(root, sum) {
     return currentSum + n.val;
   };
 
-  const processFunction = node => {
+  const processFunction = (node) => {
     if (isLeaf(node)) {
       if (pathSum(node) === sum) {
         result = true;
