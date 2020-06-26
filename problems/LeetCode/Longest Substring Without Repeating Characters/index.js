@@ -1,6 +1,6 @@
 /**
  * Longest Substring Without Repeating Characters
- * @see https://leetcode.com/explore/interview/card/facebook/5/array-and-strings/3008/
+ * @see https://leetcode.com/problems/longest-substring-without-repeating-characters/
  * 
  * The idea is to store any substring in a set, when finding the first repeated leter stop pushing into the set.
  * 
