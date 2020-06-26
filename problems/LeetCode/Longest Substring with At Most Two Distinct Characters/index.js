@@ -2,6 +2,9 @@
  * Longest Substring with At Most Two Distinct Characters
  * @see https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
  * 
+ * Using the slide window technique, the idea is to have two indices storing the right most index for any character
+ * Update the indexes when the number of chars is > 2
+ * 
  * @param {string}
  * @return {number}
  */
@@ -17,7 +20,6 @@ var lengthOfLongestSubstringTwoDistinct = function (s) {
   for (let j = 0; j < s.length; j++) {
     const c = s[j];
     if (c in map) {
-      //
       map[c] = j;
     } else {
       if (Object.keys(map).length === 2) {
