@@ -1,10 +1,10 @@
 /**
  * Longest Substring with At Most Two Distinct Characters
  * @see https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
- * 
+ *
  * Using the slide window technique, the idea is to have two indices storing the right most index for any character
  * Update the indexes when the number of chars is > 2
- * 
+ *
  * @param {string}
  * @return {number}
  */
