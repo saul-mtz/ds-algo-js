@@ -1,7 +1,17 @@
 # Install
-- [node.js](https://nodejs.org/en/)
- - If using Windows, installing using the MSI and have chocol installed run before the MSI: `choco upgrade`.
- - In root directory run: `npm update`
+### node.js
+[node.js](https://nodejs.org/en/)
+If using Windows, installing using the MSI and have chocol installed run before the MSI: `choco upgrade`.
+In root directory run: `npm update`.
+
+I need node >= 15 because it has support for ES modules, see https://stackoverflow.com/a/31367852/2938519
+
+## Jest
+Install it globally with, See [Docs](https://jestjs.io/docs/getting-started#running-from-command-line):
+```
+npm install jest --global
+```
+
 
 # VisualStudio
 All these changes are already in the Workspace Settings file in `.vscode/settings.json`.

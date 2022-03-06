@@ -24,7 +24,20 @@ Data Structures and Algorighms in Javascript
 Follow [this doc](docs/Setup_JS_Env.md).
 
 # Test
-Using jest
+## Using VSCode default Debugger
+Since node >= v15 does support ES modules, running with F5 should work. See `examples/import/index.js`
+
+## Using Commnad Line
+```
+cd examples/import
+node index.js
+```
+
+## Using Jest
+Using jest, move to the problem folder and run, [`--findRelatedTests` info here](https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles)
+```
+jest --findRelatedTests fileToTest.js 
+```
 
 # Bundle
 In order to create copy/pasteable code have to write the whole solution in a single file I use the awesome [rollupjs](https://rollupjs.org) bundler.
