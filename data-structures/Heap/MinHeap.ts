@@ -3,29 +3,29 @@ import Heap from '.';
 /**
  * Implements the heap as defined in https://en.wikipedia.org/wiki/Heap_(data_structure)
  * */
-function MaxHeap(): Heap {
-  const elements: number[] = [];
+class MinHeap implements Heap {
+  elements: number[] = [];
 
   // Basic Operations
   /**
    * find a maximum item of a max-heap, or a minimum item of a min-heap, respectively (a.k.a. peek)
    */
-  this.find = (): number => {
-    return this.isEmpty() ? undefined : elements[0];
+  find = (): number => {
+    return this.isEmpty() ? undefined : this.elements[0];
   };
 
   /**
    * adding a new key to the heap (a.k.a., push)
    */
-  this.insert = (element: number) => {
-    elements.push(element);
-    siftUp(this.size() - 1);
+  insert = (element: number) => {
+    this.elements.push(element);
+    this.siftUp(this.size() - 1);
   };
 
   /**
    * returns the node of maximum value from a max heap
    */
-  this.extract = (): number => {
+  extract = (): number => {
     if (this.isEmpty()) {
       return undefined;
     }
@@ -37,31 +37,31 @@ function MaxHeap(): Heap {
   /**
    * removing the root node of a max heap (or min heap), respectively
    */
-  this.delete = () => {
+  delete = () => {
     if (this.isEmpty()) {
       return undefined;
     }
 
     // remove the last element
-    const last = elements.splice(this.size()-1, 1);
+    const last = this.elements.pop();
 
     if (!this.isEmpty()) {
       // replace the current root with the prev last element from the array (so the current root value is deleted)
-      elements[0] = last[0];
-      siftDown(0);
+      this.elements[0] = last;
+      this.siftDown(0);
     }
   }
 
   /**
    * pop root and push a new key. More efficient than pop followed by push, since only need to balance once, not twice.
    */
-  this.replace = (element: number) => {
+  replace = (element: number) => {
     if (this.isEmpty()) {
       return this.insert(element);
     }
 
-    elements[0] = element;
-    siftDown(0);
+    this.elements[0] = element;
+    this.siftDown(0);
   }
 
   // Inspection Operations
@@ -69,52 +69,52 @@ function MaxHeap(): Heap {
   /**
    * return the number of items in the heap.
    */
-  this.size = (): number => {
-    return elements.length;
+  size = (): number => {
+    return this.elements.length;
   }
 
   /**
    * return true if the heap is empty, false otherwise.
    */
-  this.isEmpty = () => {
-    return elements.length === 0;
+  isEmpty = () => {
+    return this.elements.length === 0;
   }
 
   // Internal operations
   /**
    * Updating a key within a max- or min-heap, respectively
    */
-  const increaseKey = () => { }
+  increaseKey = () => { }
 
 
   /**
    * delete an arbitrary node (followed by moving last node and sifting to maintain heap)
    */
-  const deleteMax = (): number => {
-    return elements[0];
+  deleteMax = (): number => {
+    return this.elements[0];
   }
 
   /**
    * move a node up in the tree, as long as needed; used to restore heap condition after insertion. Called "sift" because node moves up the tree until it reaches the correct level, as in a sieve.
    */
-  const siftUp = (index: number) => {
+  siftUp = (index: number) => {
     // already in the root?
     if (index === 0) {
       return;
     }
 
     let parentIndex = Math.floor((index - 1) / 2);
-    if (elements[index] > elements[parentIndex]) {
+    if (this.elements[index] < this.elements[parentIndex]) {
       // swap inplace: https://en.wikipedia.org/wiki/XOR_swap_algorithm
-      elements[parentIndex] ^= elements[index];
-      elements[index] ^= elements[parentIndex];
-      elements[parentIndex] ^= elements[index];
-      siftUp(parentIndex);
+      this.elements[parentIndex] ^= this.elements[index];
+      this.elements[index] ^= this.elements[parentIndex];
+      this.elements[parentIndex] ^= this.elements[index];
+      this.siftUp(parentIndex);
     }
   }
 
 
-  const hasChildren = (index: number): boolean => {
+  hasChildren = (index: number): boolean => {
     if (this.isEmpty()) {
       return false;
     }
@@ -131,28 +131,28 @@ function MaxHeap(): Heap {
   /**
    * move a node down in the tree, similar to sift-up; used to restore heap condition after deletion or replacement.
    */
-  const siftDown = (index: number): void => {
-    if (!hasChildren(index)) {
+  siftDown = (index: number) => {
+    if (!this.hasChildren(index)) {
       return ;
     }
     let leftChildIndex = index * 2 + 1;
     let rightChildIndex = index * 2 + 2;
-    let biggestChildIndex = rightChildIndex >= this.size() ? leftChildIndex : (elements[leftChildIndex] > elements[rightChildIndex] ? leftChildIndex : rightChildIndex);
-    if (elements[biggestChildIndex] > elements[index]) {
+    let smallerChildIndex = rightChildIndex >= this.size() ? leftChildIndex : (this.elements[leftChildIndex] < this.elements[rightChildIndex] ? leftChildIndex : rightChildIndex);
+    if (this.elements[smallerChildIndex] < this.elements[index]) {
       // swap inplace: https://en.wikipedia.org/wiki/XOR_swap_algorithm
-      elements[biggestChildIndex] ^= elements[index];
-      elements[index] ^= elements[biggestChildIndex];
-      elements[biggestChildIndex] ^= elements[index];
-      return siftDown(biggestChildIndex);
+      this.elements[smallerChildIndex] ^= this.elements[index];
+      this.elements[index] ^= this.elements[smallerChildIndex];
+      this.elements[smallerChildIndex] ^= this.elements[index];
+      return this.siftDown(smallerChildIndex);
     }
   }
 
-  return this;
+  //return this;
 }
 
 // Creation operations
 export const createHeap = (): Heap => {
-  return new MaxHeap();
+  return new MinHeap();
 }
 
 /**
