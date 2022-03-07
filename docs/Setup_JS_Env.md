@@ -12,6 +12,12 @@ Install it globally with, See [Docs](https://jestjs.io/docs/getting-started#runn
 npm install jest --global
 ```
 
+## Typescript
+[Install the TypeScript compiler](https://code.visualstudio.com/docs/typescript/typescript-tutorial#_install-the-typescript-compiler).
+```
+npm install -g typescript
+tsc --version
+```
 
 # VisualStudio
 All these changes are already in the Workspace Settings file in `.vscode/settings.json`.

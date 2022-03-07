@@ -1,6 +1,5 @@
 {
   "author": "Saul Martinez",
-  "type": "module",
   "scripts": {
     "bundle": "npm run format && rollup -c -i",
     "format": "prettier --print-width 120 --write \"**/*.js\"",
@@ -14,7 +13,6 @@
     "@types/jest": "^26.0.0",
     "prettier": "^2.5.1",
     "rollup": "^2.69.2",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "typescript": "^3.9.5"
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }

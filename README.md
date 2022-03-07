@@ -52,6 +52,17 @@ Using jest, move to the problem folder and run, [`--findRelatedTests` info here]
 jest --findRelatedTests fileToTest.js 
 ```
 
+Then use `F5` to debug, see [Debugging](https://code.visualstudio.com/docs/typescript/typescript-tutorial#_debugging).
+
+To transpile a single directory I need to move to the folder and then `tsc file.ts`.
+
+## Typescript
+I still need to find a way to debug without transpiling first, so far with our [`./tsconfig.json`](tsconfig.json) file I can do:
+```
+# Whole project
+tsc
+```
+
 # Bundle
 In order to create copy/pasteable code have to write the whole solution in a single file I use the awesome [rollupjs](https://rollupjs.org) bundler.
 
