@@ -1,5 +1,5 @@
-import Queue from "../../data-structures/Queue";
-import Stack from "../../data-structures/Stack";
+import Queue from "../../data-structures/Queue/index.js";
+import Stack from "../../data-structures/Stack/index.js";
 
 /**
  * Pre-order (NLR)

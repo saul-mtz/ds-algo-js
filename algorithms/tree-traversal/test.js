@@ -1,5 +1,5 @@
-import BinaryTree from "../../data-structures/BinaryTree";
-import { inOrder, postOrder, preOrder } from ".";
+import BinaryTree from "../../data-structures/BinaryTree/index.js";
+import { inOrder, postOrder, preOrder } from "./index.js";
 
 const testTree1 = new BinaryTree();
 const testTree2 = new BinaryTree([3, 9, 20, null, null, 15, 7]);

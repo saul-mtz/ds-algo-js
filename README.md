@@ -19,6 +19,8 @@ Data Structures and Algorighms in Javascript
     - [Pre-order (NLR)](https://en.wikipedia.org/wiki/Tree_traversal#Pre-order_(NLR))
     - [In-order (LNR)](https://en.wikipedia.org/wiki/Tree_traversal#In-order_(LNR))
     - [Post-order (LRN)](https://en.wikipedia.org/wiki/Tree_traversal#Post-order_(LRN))
+- Graph
+  - [Dijkstra's algorithm](algorithms/dijkstra/index.js)
 
 # Setup
 Follow [this doc](docs/Setup_JS_Env.md).
@@ -28,12 +30,23 @@ Follow [this doc](docs/Setup_JS_Env.md).
 Since node >= v15 does support ES modules, running with F5 should work. See `examples/import/index.js`
 
 ## Using Commnad Line
+As of node `v16.14.0` I need to specify `--experimental-specifier-resolution=node` to make it resolve dir imports correctly.
+
 ```
 cd examples/import
-node index.js
+node --experimental-specifier-resolution=node index.js
+```
+Or add the following alias to `~/.profile`
+```
+alias _node="node --experimental-specifier-resolution=node"
 ```
 
 ## Using Jest
+All tests in the repo:
+```
+npm test
+```
+
 Using jest, move to the problem folder and run, [`--findRelatedTests` info here](https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles)
 ```
 jest --findRelatedTests fileToTest.js 

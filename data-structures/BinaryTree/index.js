@@ -1,5 +1,4 @@
-import Queue from "../Queue";
-import Node from "../TreeNode";
+import Node from "../TreeNode.js";
 
 /**
  * Validate if a node is a leaf (no children)
