@@ -8,9 +8,9 @@ Data Structures and Algorighms in Javascript
 - [Stack](data-structures/Stack)
 - [Queue](data-structures/Queue)
 - [Trie](data-structures/Trie)
-- [Heap](data-structures/Heap)
-  - Min-heap
-  - Max-heap
+- [Heap](data-structures/Heap/index.ts)
+  - [Min-heap](data-structures/Heap/MinHeap.ts)
+  - [Max-heap](data-structures/Heap/MaxHeap.ts)
 
 # [Algorithms](algorithms)
 - Tree Traversal
@@ -71,3 +71,13 @@ For instance, For the [Maximum Depth of Binary Tree](https://leetcode.com/proble
 npm run bundle problems/LeetCode/Maximum\ Depth\ of\ Binary\ Tree/index.js
 ```
 there will be a single file in `./bundle.js` with the whole solution code.
+
+# Errors
+```
+import { ... } from ...
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at Object.compileFunction ...
+```
+Add `"type": "module"` to `package.json`, see https://stackoverflow.com/a/64655153/2938519

@@ -27,3 +27,12 @@ export const depthFirstSearch = (vertex, options) => {
     }
   }
 };
+
+/**
+ * https://en.wikipedia.org/wiki/Breadth-first_search
+ * 
+ * @param {*} vertex 
+ * @param {*} options 
+ */
+export const breadthFirstSearch = (vertex, options) => {
+}

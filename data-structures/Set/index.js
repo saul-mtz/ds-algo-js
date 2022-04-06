@@ -1,4 +1,4 @@
-import testObject from './testModule.js';
+import testObject from "./testModule.js";
 
 console.log({ testObject });
 

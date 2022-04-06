@@ -1,5 +1,3 @@
-import { timingSafeEqual } from "crypto";
-
 /**
  * @param {number} n Number of nodes
  * @param {nmber} m Number of edges
@@ -46,8 +44,6 @@ function Graph() {
     } else {
       this.adjacentList.set(y, new Map([[x, weight]]));
     }
-
-    //console.log('Adding edge', x, y, weight, this.adjacentList);
   };
 }
 

@@ -11,7 +11,7 @@ var getNextIndexes = (i, startTime, endTime) => {
   let minStartTimeInBetween = Number.MAX_SAFE_INTEGER;
   let minStartTimeAfter = Number.MAX_SAFE_INTEGER;
 
-  for (let next = 0; next < startTime.length; next ++) {
+  for (let next = 0; next < startTime.length; next++) {
     if (startTime[next] >= startTime[i] && next !== i) {
       if (startTime[next] < endTime[i]) {
         // between starting and ending the current job
@@ -27,14 +27,14 @@ var getNextIndexes = (i, startTime, endTime) => {
       }
     }
   }
-  
+
   return { nextIndexAfter, nextIndexInBetween };
-}
+};
 
 // max profit that we can get starting in point i
 var maxProfitFrom = (i, jobs, cache) => {
-  if (i < 0 || i > jobs.length-1) {
-      return 0;
+  if (i < 0 || i > jobs.length - 1) {
+    return 0;
   }
 
   if (cache[i]) {
@@ -45,44 +45,43 @@ var maxProfitFrom = (i, jobs, cache) => {
 
   // the max including or excluding the current job
   cache[i] = Math.max(
-      profit[i] + maxProfitFrom(nextIndexAfter, startTime, endTime, profit, cache), // including
-      maxProfitFrom(nextIndexInBetween, startTime, endTime, profit, cache) // excluding
+    profit[i] + maxProfitFrom(nextIndexAfter, startTime, endTime, profit, cache), // including
+    maxProfitFrom(nextIndexInBetween, startTime, endTime, profit, cache) // excluding
   );
 
   return cache[i];
-}
+};
 
 let buildJobs = (startTime, endTime, profit) => {
   let jobs = [];
-  for (let i = 0; i < startTime.length; i ++) {
+  for (let i = 0; i < startTime.length; i++) {
     jobs.push({
       startTime: startTime[i],
       endTime: endTime[i],
-      profit: profit[i]
-    })
+      profit: profit[i],
+    });
   }
 
   return jobs.sort((a, b) => {
-    a.startTime > b.startTime
+    a.startTime > b.startTime;
   });
-}
+};
 
 /**
-* @param {number[]} startTime
-* @param {number[]} endTime
-* @param {number[]} profit
-* @return {number}
-*/
-var jobScheduling = function(startTime, endTime, profit) {
+ * @param {number[]} startTime
+ * @param {number[]} endTime
+ * @param {number[]} profit
+ * @return {number}
+ */
+var jobScheduling = function (startTime, endTime, profit) {
   let cache = {};
   let jobs = buildJobs(startTime, endTime, profit);
   return maxProfitFrom(0, jobs, cache);
 };
 
-console.log(jobScheduling([1,2,3,3], [3,4,5,6], [50,10,40,70]));
+console.log(jobScheduling([1, 2, 3, 3], [3, 4, 5, 6], [50, 10, 40, 70]));
 
 //export default jobScheduling;
-
 
 /*
 Jest testing 

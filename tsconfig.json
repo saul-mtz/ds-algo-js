@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "target": "es6",
     "module": "commonjs",
     "outDir": "out",
     "sourceMap": true
-  }
+  },
+  "include": ["data-structures/**/*", "algorithms/**/*"],
 }
